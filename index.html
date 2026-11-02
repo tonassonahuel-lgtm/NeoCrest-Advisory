@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NeoCrest Advisory · Business Coaching &amp; Sales Consulting</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f5f7;--fg:#14232b;--muted:#506069;--card:#fff;--line:#d9e0e5;--ink:#12303b;--on-ink:#eef3f5;--accent:#9a7233;--accent-soft:#d2ad6e;
+--serif:"Newsreader",Georgia,"Times New Roman",serif;--sans:"Manrope",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e171c;--fg:#e8eef1;--muted:#9fb0b9;--card:#152229;--line:#243640;--ink:#0a1a21;--accent:#d2ad6e}}
+:root[data-theme="dark"]{--bg:#0e171c;--fg:#e8eef1;--muted:#9fb0b9;--card:#152229;--line:#243640;--ink:#0a1a21;--accent:#d2ad6e}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 18px/1.7 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{width:min(1240px,100% - 80px);margin-inline:auto}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{font:600 24px var(--serif);text-decoration:none;letter-spacing:.01em}
+.brand i{font-style:normal;color:var(--accent)}
+nav{display:flex;align-items:center;gap:36px;font-size:15px;font-weight:500}
+nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--fg)}
+nav a.btn{color:#fff;padding:10px 22px;font-size:15px}
+.btn{display:inline-block;background:var(--accent);color:#fff;font:600 16px var(--sans);padding:16px 32px;border:0;border-radius:4px;text-decoration:none;cursor:pointer}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:transparent;color:inherit;border:1px solid currentColor}
+:focus-visible{outline:3px solid var(--accent-soft);outline-offset:3px}
+.hero{background:var(--ink);color:var(--on-ink);padding:132px 0 120px}
+.hero .wrap{display:grid;grid-template-columns:1.6fr 1fr;gap:96px;align-items:end}
+h1{font:500 clamp(46px,5.4vw,78px)/1.06 var(--serif);margin:0 0 30px;letter-spacing:-.012em}
+.hero p.lead{font-size:21px;color:#b9c8cf;max-width:32em;margin:0 0 42px}
+.hero .cta{display:flex;gap:16px}
+.hero .btn.ghost{color:var(--on-ink)}
+.years{border-left:2px solid var(--accent-soft);padding:4px 0 4px 36px}
+.years b{display:block;font:500 128px/1 var(--serif);color:var(--accent-soft)}
+.years span{display:block;color:#b9c8cf;margin-top:12px;max-width:15em}
+section{padding:120px 0}
+h2{font:500 clamp(34px,3.6vw,48px)/1.15 var(--serif);margin:0 0 20px;letter-spacing:-.006em}
+.intro{color:var(--muted);max-width:38em;margin:0 0 56px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--accent);padding:40px 36px}
+.card h3{font:600 25px/1.25 var(--serif);margin:0 0 12px}
+.card p{margin:0;color:var(--muted);font-size:17px}
+.alt{background:var(--card);border-block:1px solid var(--line)}
+.split{display:grid;grid-template-columns:1fr 1.25fr;gap:96px}
+.steps{list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:56px 1fr;gap:6px 20px;padding:0 0 34px}
+.steps li::before{content:counter(s);font:500 40px/1 var(--serif);color:var(--accent)}
+.steps h3{font:600 20px var(--sans);margin:0 0 4px}
+.steps p{margin:0;color:var(--muted);font-size:17px}
+.quote{font:500 clamp(26px,2.6vw,34px)/1.4 var(--serif);max-width:24em;margin:0 0 26px}
+.profile p{color:var(--muted)}
+.facts{display:grid;gap:14px;margin:30px 0 0;padding:0;list-style:none}
+.facts li{padding-left:26px;position:relative}
+.facts li::before{content:"";position:absolute;left:0;top:.8em;width:12px;height:2px;background:var(--accent)}
+.contact{background:var(--ink);color:var(--on-ink)}
+.contact .intro{color:#b9c8cf}
+.contact .split{align-items:start}
+.contact dl{margin:0}.contact dt{font-weight:600;margin-top:22px}.contact dd{margin:2px 0 0;color:#b9c8cf}
+form{display:grid;gap:18px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+label{display:grid;gap:6px;font-weight:600;font-size:15px}
+input,textarea{font:400 16px var(--sans);padding:14px 16px;border:1px solid #35505b;border-radius:4px;background:#0c222a;color:#eef3f5;width:100%}
+textarea{min-height:150px;resize:vertical}
+.note{font-size:14px;color:#9fb0b9;margin:0}
+#ok{display:none;padding:14px 16px;border:1px solid var(--accent-soft);color:var(--accent-soft)}
+footer{padding:32px 0;font-size:14px;color:var(--muted);text-align:center}
+@media (max-width:900px){.wrap{width:min(1240px,100% - 40px)}nav a:not(.btn){display:none}.hero{padding:72px 0}.hero .wrap,.split{grid-template-columns:1fr;gap:48px}.grid3,.row{grid-template-columns:1fr}section{padding:72px 0}.years b{font-size:88px}}
+
+.photo{margin:0}.photo .img{aspect-ratio:3/2;overflow:hidden;border:1px solid var(--line);background:var(--ink)}
+.photo svg,.photo img{width:100%;height:100%;display:block;object-fit:cover}
+.photo figcaption{font-size:15px;color:var(--muted);margin-top:12px}
+.idx{display:grid;grid-template-columns:1fr 1.1fr;gap:96px;align-items:start}
+.score{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--accent);padding:36px}
+.score-h{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px}
+.score-h span{font-weight:600}.score-h b{font:500 60px/1 var(--serif);color:var(--accent)}
+.m{margin:0 0 22px}.m .l{display:flex;justify-content:space-between;font-size:15px;font-weight:600;margin-bottom:8px}
+.m .l em{font-style:normal;color:var(--muted);font-weight:500}
+.bar{height:10px;background:var(--line);position:relative}.bar i{position:absolute;inset:0 auto 0 0;background:var(--accent)}.bar u{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--fg)}
+.legend{font-size:14px;color:var(--muted);margin:8px 0 0}
+.guar{margin-top:72px;display:grid;grid-template-columns:repeat(3,1fr);gap:40px;border-top:1px solid var(--line);padding-top:44px}
+.guar h3{font:600 23px var(--serif);margin:0 0 8px}.guar p{margin:0;color:var(--muted);font-size:17px}
+.fine{font-size:14px;color:var(--muted);margin:32px 0 0;max-width:60em}
+.faq{max-width:820px}
+details{border-bottom:1px solid var(--line);padding:22px 0}details:first-of-type{border-top:1px solid var(--line)}
+summary{cursor:pointer;font:600 21px/1.3 var(--serif);list-style:none}summary::-webkit-details-marker{display:none}
+summary::after{content:"+";float:right;color:var(--accent);font-size:26px;line-height:1}details[open] summary::after{content:"\2212"}
+details p{margin:12px 0 0;color:var(--muted);max-width:44em}
+@media (max-width:900px){.idx,.guar{grid-template-columns:1fr;gap:40px}.guar{margin-top:48px}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="p" viewBox="0 0 40 70"><circle cx="20" cy="12" r="10"/><path d="M2 70c0-24 8-38 18-38s18 14 18 38z"/></symbol></svg>
+<header class="top"><div class="wrap">
+<a class="brand" href="#home">Neo<i>Crest</i> Advisory</a>
+<nav aria-label="Main"><a href="#services">Services</a><a href="#approach">Approach</a><a href="#index">Success Index</a><a href="#about">About</a><a href="#contact">Contact</a><a class="btn" href="#contact">Book a call</a></nav>
+</div></header>
+
+<main id="home">
+<div class="hero"><div class="wrap">
+<div>
+<h1>Clear direction for leaders. Real results for teams.</h1>
+<p class="lead">I help business owners and executives sharpen their sales strategy, strengthen their leadership, and keep their teams motivated and accountable.</p>
+<div class="cta"><a class="btn" href="#contact">Schedule a free consultation</a><a class="btn ghost" href="#services">Explore services</a></div>
+</div>
+<div class="years"><b>7</b><span>years coaching business owners and their teams</span></div>
+</div></div>
+
+<section id="services"><div class="wrap">
+<h2>How I can help your business</h2>
+<p class="intro">Every company is at a different stage. I work in three areas, separately or together, depending on what is holding your growth back today.</p>
+<div class="grid3">
+<article class="card"><h3>Sales consulting</h3><p>We review your sales process, pricing, and value proposition to build a clear plan and targets your team can actually hit.</p></article>
+<article class="card"><h3>Executive coaching</h3><p>One-on-one sessions to help you make better decisions, delegate with confidence, and find direction when the path isn’t obvious.</p></article>
+<article class="card"><h3>Team motivation</h3><p>Practical workshops and talks that align your people with company goals, improve culture, and sustain commitment over time.</p></article>
+</div>
+</div></section>
+
+<section id="room" style="padding-top:0"><div class="wrap">
+<div class="grid3">
+<figure class="photo"><div class="img"><svg viewBox="0 0 600 400" role="img" aria-label="Leadership team reviewing a growth chart in a boardroom"><rect width="600" height="400" fill="#12303b"/><rect x="170" y="36" width="260" height="130" rx="6" fill="#0c222a" stroke="#35505b"/><g fill="#d2ad6e"><rect x="196" y="120" width="28" height="30"/><rect x="240" y="104" width="28" height="46"/><rect x="284" y="86" width="28" height="64"/><rect x="328" y="70" width="28" height="80"/><rect x="372" y="54" width="28" height="96"/></g><use href="#p" x="90" y="168" width="51" height="90" fill="#8fb0bd"/><use href="#p" x="185" y="168" width="51" height="90" fill="#d2ad6e"/><use href="#p" x="280" y="168" width="51" height="90" fill="#cfd9de"/><use href="#p" x="375" y="168" width="51" height="90" fill="#8fb0bd"/><use href="#p" x="470" y="168" width="51" height="90" fill="#d2ad6e"/><rect x="60" y="240" width="480" height="70" rx="12" fill="#1d4452"/><g fill="#cfd9de"><rect x="120" y="254" width="44" height="6"/><rect x="290" y="254" width="44" height="6"/><rect x="450" y="254" width="44" height="6"/></g></svg></div><figcaption>Strategy sessions with leadership teams</figcaption></figure>
+<figure class="photo"><div class="img"><svg viewBox="0 0 600 400" role="img" aria-label="Two people in a one-on-one coaching conversation"><rect width="600" height="400" fill="#1a3d4a"/><rect x="40" y="40" width="150" height="170" fill="#274f5e" stroke="#35505b"/><path d="M115 40v170M40 125h150" stroke="#35505b"/><rect y="340" width="600" height="60" fill="#12303b"/><use href="#p" x="150" y="130" width="100" height="175" fill="#8fb0bd"/><use href="#p" x="350" y="130" width="100" height="175" fill="#d2ad6e"/><rect x="110" y="270" width="380" height="16" rx="4" fill="#0c222a"/><rect x="140" y="286" width="8" height="54" fill="#0c222a"/><rect x="452" y="286" width="8" height="54" fill="#0c222a"/><g fill="#eef3f5"><rect x="262" y="250" width="22" height="20"/><rect x="318" y="250" width="22" height="20"/><rect x="288" y="262" width="26" height="8"/></g></svg></div><figcaption>One-on-one executive coaching</figcaption></figure>
+<figure class="photo"><div class="img"><svg viewBox="0 0 600 400" role="img" aria-label="Team workshop in front of a whiteboard with notes"><rect width="600" height="400" fill="#0f2a33"/><rect x="70" y="36" width="460" height="170" rx="4" fill="#eef3f5"/><g><rect x="100" y="60" width="60" height="44" fill="#d2ad6e"/><rect x="180" y="60" width="60" height="44" fill="#8fb0bd"/><rect x="260" y="60" width="60" height="44" fill="#a8c9a0"/><rect x="340" y="60" width="60" height="44" fill="#d2ad6e"/><rect x="420" y="60" width="60" height="44" fill="#8fb0bd"/><rect x="140" y="130" width="60" height="44" fill="#a8c9a0"/><rect x="220" y="130" width="60" height="44" fill="#d2ad6e"/><rect x="300" y="130" width="60" height="44" fill="#8fb0bd"/><rect x="380" y="130" width="60" height="44" fill="#a8c9a0"/></g><rect y="353" width="600" height="47" fill="#0a1a21"/><use href="#p" x="110" y="230" width="70" height="123" fill="#8fb0bd"/><use href="#p" x="230" y="230" width="70" height="123" fill="#d2ad6e"/><use href="#p" x="350" y="230" width="70" height="123" fill="#cfd9de"/><use href="#p" x="450" y="230" width="70" height="123" fill="#8fb0bd"/></svg></div><figcaption>Hands-on workshops with your whole team</figcaption></figure>
+</div>
+</div></section>
+
+<section id="approach" class="alt"><div class="wrap split">
+<div><h2>A simple, no-nonsense process</h2><p class="intro" style="margin:0">We agree on goals from day one and measure progress at every stage.</p></div>
+<ol class="steps">
+<li><div><h3>Discovery</h3><p>An initial conversation and review of your situation: where you are, what’s in the way, and what you want to achieve.</p></div></li>
+<li><div><h3>Action plan</h3><p>We set priorities, owners, and realistic deadlines for the next 90 days.</p></div></li>
+<li><div><h3>Ongoing coaching</h3><p>Regular sessions with concrete assignments in between, so what we agree on gets done.</p></div></li>
+<li><div><h3>Measure and adjust</h3><p>We review results, correct course where needed, and set the next goal.</p></div></li>
+</ol>
+</div></section>
+
+<section id="index"><div class="wrap">
+<div class="idx">
+<div>
+<h2>The NeoCrest Success Index</h2>
+<p class="intro" style="margin-bottom:24px">Motivation is hard to see. Progress shouldn’t be. Before we begin, we measure where your company stands on a 0 to 100 scale across four areas. We measure again at day 45 and day 90, so you see exactly what changed and what didn’t.</p>
+<p style="color:var(--muted);margin:0">The Index is built on my own working method, applied the same way with every client. You get a written baseline, an agreed target, and a clear record of results.</p>
+</div>
+<div class="score" aria-label="Sample Success Index scorecard">
+<div class="score-h"><span>Sample scorecard<br><span style="font-weight:400;color:var(--muted);font-size:15px">Day 0 to day 90</span></span><b>47 → 74</b></div>
+<div class="m"><div class="l">Sales execution<em>48 → 72</em></div><div class="bar"><i style="width:72%"></i><u style="left:48%"></u></div></div>
+<div class="m"><div class="l">Leadership clarity<em>55 → 80</em></div><div class="bar"><i style="width:80%"></i><u style="left:55%"></u></div></div>
+<div class="m"><div class="l">Team engagement<em>40 → 68</em></div><div class="bar"><i style="width:68%"></i><u style="left:40%"></u></div></div>
+<div class="m"><div class="l">Execution discipline<em>45 → 75</em></div><div class="bar"><i style="width:75%"></i><u style="left:45%"></u></div></div>
+<p class="legend">The line marks the starting score; the bar shows day 90. Illustrative example only, not a client result.</p>
+</div>
+</div>
+<div class="guar">
+<div><h3>A written baseline</h3><p>You receive your starting Index and an agreed target in writing before the first working session.</p></div>
+<div><h3>Measured, not assumed</h3><p>Progress is re-measured at day 45 and day 90 with the same questions and the same business numbers.</p></div>
+<div><h3>My process guarantee</h3><p>If you complete the 90-day plan and the agreed target isn’t reached, we keep working together at no additional fee for up to 60 days.</p></div>
+</div>
+<p class="fine">I guarantee my process and my accountability, not your market. Guarantee terms, eligibility, and targets are defined in your engagement agreement.</p>
+</div></section>
+
+<section id="about" class="alt"><div class="wrap split">
+<div>
+<p class="quote">“Companies don’t grow on a burst of motivation. They grow on clarity, habits, and steady leadership.”</p>
+<p><strong>Daniel Herrera</strong><br><span style="color:var(--muted)">Founder, NeoCrest Advisory</span></p>
+</div>
+<div class="profile">
+<h2>Seven years alongside the people who run companies</h2>
+<p>For the past seven years I’ve worked with owners, managers, and sales teams on sales processes, leadership, and people development. My approach is practical: I listen, organize the information, and help you decide and act.</p>
+<ul class="facts">
+<li>Direct, confidential work with the decision-makers.</li>
+<li>Written goals and follow-up at every session.</li>
+<li>In person or online, depending on your schedule.</li>
+</ul>
+</div>
+</div></section>
+
+<section id="faq"><div class="wrap">
+<h2>Common questions</h2>
+<div class="faq">
+<details><summary>Who do you work with?</summary><p>Owners, executives, and sales leaders of small and mid-sized companies who want a clearer strategy, a stronger team, and someone to hold the plan accountable.</p></details>
+<details><summary>What happens on the first call?</summary><p>A free, no-obligation conversation about your business, your goals, and what is in the way. If we’re a good fit, I’ll outline how we would work together.</p></details>
+<details><summary>How is the Success Index measured?</summary><p>Through short assessments for you and your team, plus the business numbers we agree on together, such as pipeline, conversion, and retention. The same method is used at day 0, day 45, and day 90.</p></details>
+<details><summary>Do you work in person or online?</summary><p>Both. Sessions can be held on video, by phone, or in person at your location, depending on what fits your schedule.</p></details>
+<details><summary>What happens after the first 90 days?</summary><p>You decide. You can continue with a new plan and a new target, move to a lighter schedule, or stop with everything documented.</p></details>
+</div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap split">
+<div>
+<h2>Let’s talk about your business</h2>
+<p class="intro" style="margin:0 0 10px">Your first conversation is free and carries no obligation. Tell me what you need and I’ll reply within one business day.</p>
+<dl><dt>Email</dt><dd>hello@neocrestadvisory.com</dd><dt>Phone</dt><dd>+1 (000) 000-0000</dd><dt>Hours</dt><dd>Monday to Friday, 9:00 a.m. to 6:00 p.m. (ET)</dd></dl>
+</div>
+<form id="f" novalidate>
+<div class="row">
+<label>Name<input id="n" autocomplete="name" required></label>
+<label>Email<input id="e" type="email" autocomplete="email" required></label>
+</div>
+<label>Company<input id="c" autocomplete="organization"></label>
+<label>How can I help?<textarea id="m" required></textarea></label>
+<button class="btn" type="submit">Send message</button>
+<p class="note">Your email app will open with the message ready to send.</p>
+<div id="ok" role="status">Thank you. Check your email app to finish sending.</div>
+</form>
+</div></section>
+</main>
+<footer>© 2026 NeoCrest Advisory. Business coaching and sales consulting.</footer>
+<script>
+document.getElementById("f").addEventListener("submit",function(ev){
+ev.preventDefault();
+var g=function(i){return document.getElementById(i).value.trim()};
+if(!g("n")||!g("e")||!g("m")){document.getElementById(!g("n")?"n":!g("e")?"e":"m").focus();return}
+var body="Name: "+g("n")+"\nEmail: "+g("e")+"\nCompany: "+g("c")+"\n\n"+g("m");
+location.href="mailto:hello@neocrestadvisory.com?subject="+encodeURIComponent("Inquiry from website")+"&body="+encodeURIComponent(body);
+document.getElementById("ok").style.display="block";
+});
+</script>
+</body>
+</html>
